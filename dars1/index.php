@@ -7,7 +7,7 @@
     <title>1- dars</title>
 </head>
 <body>
-    <form action="javob.php" method="GET">
+    <form action="javob.php" method="POST">
         <input type="text" name="ism" placeholder="Ismingiz?"><br>
         <input type="number" name="yosh" placeholder="Yoshingiz?"><br>
         <input type="submit" name="submit" value="Yubor">
