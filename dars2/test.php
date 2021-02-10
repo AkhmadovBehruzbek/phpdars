@@ -8,7 +8,7 @@
 
     echo "Maxsulot narxi: {$summ} so'm<br>";
 
-    if ($summ >= 50000) {
+    if ($summ >= 50000 && $son >= 2) {
         $ch = $summ * 0.1;
         $t = $summ - $ch;
 
