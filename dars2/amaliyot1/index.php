@@ -11,7 +11,7 @@
     <p>kiritilgan qiymatni dollordan so'mga so'mdan dollorga aylantiradigan dastur.</p>
     <br>
 
-    <form action="test.php" method="GET">
+    <form method="GET">
         <input type="number" name="miqdor" placeholder="Pul miqdorini kiriting: "><br>
         <input type="radio" name="radio" value="s">
         Dollordan So'mga<br>
