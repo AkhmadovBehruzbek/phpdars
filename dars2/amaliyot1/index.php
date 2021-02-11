@@ -24,7 +24,6 @@
     <?php
     $son = $_GET['miqdor'];
     $tip = $_GET['radio'];
-    $index = 'index.php';
 
     if (isset($_GET['submit'])) {
         if ($tip == "s") {
