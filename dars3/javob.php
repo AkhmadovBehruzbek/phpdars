@@ -11,7 +11,8 @@
     
 ?>
 
-<img src="'uploads/'<?php echo $_FILES['f']['name']; ?>" alt="rasm">
+    
+
 <?php
 if ($b >= 2000) {
     echo "katta fayl";
@@ -19,3 +20,5 @@ if ($b >= 2000) {
     move_uploaded_file($_FILES["f"]["tmp_name"],"uploads/" . $_FILES["f"]["name"]);
 }
 ?>
+
+<img src="<?='uploads/' . $_FILES['f']['name']; ?>" width="400px" alt="rasm"><br>
