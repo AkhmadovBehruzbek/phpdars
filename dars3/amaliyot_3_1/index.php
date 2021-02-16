@@ -12,7 +12,6 @@
 
     <form action="javob.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="img_file"><br>
-        <input type="text" name="img_name" placeholder="Rasm nomini kiriting:"><br>
         <input type="submit" value="Yuborish" name="submit"> <br>
     </form>
 </body>
