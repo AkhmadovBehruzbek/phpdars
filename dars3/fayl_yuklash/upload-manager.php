@@ -1,4 +1,5 @@
 <?php
+    
     // fayl yuborilganmi?
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // fayl xatolarsiz yuklandimi
@@ -16,7 +17,7 @@
 
             // fayl hajmi tasdiqlandimi? (5mb max)
             $maxSize = 5 * 1024 * 1024;
-            if ($fileSize > $maxSize) die("ERROR: Tuxsat etilgan hajmdan oshib ketti");
+            if ($fileSize > $maxSize) die("ERROR: Ruxsat etilgan hajmdan oshib ketti");
             // faylning MIME turi tekshirildimi?
             if (in_array($fileType, $allowed)) {
                 // Uni yuklashdan oldin mavjudligi tekshirildimi?
@@ -33,4 +34,6 @@
             echo "ERROR: " . $_FILES['photo']['error'];
         }
     }
-?>
+    
+?> 
+
