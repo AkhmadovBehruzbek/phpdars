@@ -1,11 +1,14 @@
 <?php
     $yangilik = array (
         array("nomi"=>"yangilik1", "rasmi"=>"1.jpg", "content"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus?"),
-        array("nomi"=>"yangilik2", "rasmi"=>"2.jpg", "content"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus?"),
-        array("nomi"=>"yangilik3", "rasmi"=>"3.jpg", "content"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus?")
+        array("nomi"=>"yangilik2", "rasmi"=>"2.png", "content"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus?"),
+        array("nomi"=>"yangilik3", "rasmi"=>"3.jpeg", "content"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus?")
     );
 
-    $reklama = ["1.jpg", "2.jpg", "3.jpg"];
+    $reklama = ["1.jpg", "2.png", "3.jpeg", "4.png"];
+
+
+
 ?>
 
 
@@ -84,36 +87,34 @@
                 <td id="left">
                     <!-- left-top start -->        
                     <ul id="ul">
-                        <li>yangilik 1</li>
-                        <li>yangilik 2</li>
-                        <li>yangilik 3</li>
+                        <?php
+                            foreach($yangilik as $y) {
+                                echo "<li><a href='?{$y['nomi']}'>{$y['nomi']}</a></li>";
+                            }
+                        ?>
                     </ul>
                     <hr>
                     <!-- left-bottom start -->
-                        <h3>Reklama</h3>
-                        <img id="rek" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="">
+                    <h3>Reklama</h3>
+                    <?php
+                        for($i=1; $i<=1; $i++) {
+                            shuffle($reklama);
+                            echo "<img id='rek' src='images/{$reklama[$i]}'>";
+                        }
+                    ?>    
                 </td>
                 <!-- right start -->
                 <td id="right">
                     <div id="div">
-                        <img id="img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="rasm">
-                        <h1>Sarlavha1</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus? Reprehenderit perferendis sit tempora!
-                        </p>
-                        <br>
-                        <img id="img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="rasm">
-                        <h1>Sarlavha1</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus? Reprehenderit perferendis sit tempora!
-                        </p>
-                        <br>
-                        <img id="img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="rasm">
-                        <h1>Sarlavha1</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veritatis omnis rem labore quam corporis architecto eaque saepe laboriosam, aperiam maxime voluptates ea, laudantium dolores ducimus? Reprehenderit perferendis sit tempora!
-                        </p>
-                        <br>
+                    <?php
+                        foreach($yangilik as $y) {
+                            if (isset($_GET[$y['nomi']])) {
+                                echo "<img id='img' src='images/{$y['rasmi']}'>";
+                                echo "<h1>{$y['nomi']}</h1>";
+                                echo "<p>{$y['content']}</p><br>";
+                            }  
+                        }
+                    ?>
                     </div>
                     
                 </td>
