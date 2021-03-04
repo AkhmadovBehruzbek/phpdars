@@ -1,0 +1,27 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.sayt {
+    width: 960px;
+    height: 600px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+.header {
+    height: 60px;
+    background-color: #aaa;
+}
+
+.log {
+    width: 250px;
+    background-color: #eee;
+    float: left;
+}
+
+.content {
+    width: 710px;
+    float: left;
+}
